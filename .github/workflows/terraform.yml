@@ -1,14 +1,9 @@
 name: Terraform CI
 
 on:
-  push:
-    branches:
-      - main
-
   pull_request:
     branches:
       - main
-
 
 jobs:
   terraform:
@@ -16,6 +11,10 @@ jobs:
     name: Terraform Validate
 
     runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
 
@@ -25,6 +24,12 @@ jobs:
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::949228373779:role/github-actions-terraform-role
+          aws-region: ap-south-1
 
 
       - name: Terraform Format Check
