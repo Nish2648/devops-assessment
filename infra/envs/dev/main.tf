@@ -46,7 +46,7 @@ module "alb" {
 }
 
 module "ecs" {
-  source = "../../modules/ecs"
+  source     = "../../modules/ecs"
   ecs_cpu    = var.ecs_cpu
   ecs_memory = var.ecs_memory
 
