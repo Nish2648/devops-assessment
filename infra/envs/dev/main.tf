@@ -12,7 +12,7 @@ module "network" {
 
 }
 module "Security_groups" {
-  source = "../../modules/security_groups"
+  source = "../../modules/Security_groups"
 
   vpc_id = module.network.vpc_id
 }
