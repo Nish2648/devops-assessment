@@ -1,4 +1,4 @@
-name: Terraform CI
+name: Terraform CI  ## Terraform CI Enabled
 
 on:
   pull_request:
