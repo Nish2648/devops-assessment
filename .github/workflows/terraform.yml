@@ -1,5 +1,4 @@
-name: Terraform CI  ## Terraform CI Enabled
-
+name: Terraform CI  ## Terraform CI
 on:
   pull_request:
     branches:
