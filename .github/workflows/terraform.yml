@@ -48,4 +48,4 @@ jobs:
 
       - name: Terraform Plan
         working-directory: infra/envs/dev
-        run: terraform plan -refresh=false
+        run: terraform plan -refresh=false -var-file="terraform.tfvars" -no-color
