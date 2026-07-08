@@ -11,7 +11,7 @@ module "network" {
   private_subnet_2_cidr = var.private_subnet_2_cidr
 
 }
-module "security_groups" {
+module "Security_groups" {
   source = "../../modules/security_groups"
 
   vpc_id = module.network.vpc_id
