@@ -14,10 +14,6 @@
 - PostgreSQL Database
 - Backup & Restore
 
-# DevOps Assessment
-
-Terraform + Docker + PostgreSQL + Database Reliability
-
 ---
 
 ## Overview
